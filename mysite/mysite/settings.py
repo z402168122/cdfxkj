@@ -28,6 +28,16 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+STATIC_URL = '/static/'
+
+
+# Absolute path to the directory static files should be collected to.
+# Don't put anything in this directory yourself; store your static files
+# in apps' "static/" subdirectories and in STATICFILES_DIRS.
+# Example: "/home/media/media.lawrence.com/static/"
+STATIC_ROOT = os.path.abspath(os.path.join(BASE_DIR, '../static'))
+
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -55,7 +65,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates'),],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -117,14 +127,3 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-
-STATIC_URL = '/static/'
-
-import sys
-SITE_ROOT = os.path.dirname(os.path.abspath(__file__))
-
-# Absolute path to the directory static files should be collected to.
-# Don't put anything in this directory yourself; store your static files
-# in apps' "static/" subdirectories and in STATICFILES_DIRS.
-# Example: "/home/media/media.lawrence.com/static/"
-STATIC_ROOT = os.path.abspath(os.path.join(SITE_ROOT, '../static'))
