@@ -11,7 +11,7 @@ from django.core.handlers.wsgi import WSGIHandler
 # 设置 Django 设置模块
 _HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.append(_HERE)
-os.environ['DJANGO_SETTINGS_MODULE'] = "settings"
+os.environ['DJANGO_SETTINGS_MODULE'] = "mysite.settings"
 
 
 def main(port):
