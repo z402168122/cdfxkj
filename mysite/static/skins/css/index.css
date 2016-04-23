@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+/*2013.9.30 lyw*/
+body{ background-color:#e4e4e4;}
+
+/*Banner*/
+.Inbanner{ position:relative; width:100%; height:410px; z-index:1; overflow:hidden;}
+.banUL{  position:relative; z-index:1; width:100%; height:410px;}
+.banUL ul{}
+.banUL ul li{ position:absolute; left:0px; top:0px; display:none; z-index:1; width:100%; height:410px;}
+.banUL ul li img{ display:none}
+.banUL ul li a{ width:100%; height:100%; display:block;}
+.control{ position:absolute; width:100%; left:0px; bottom:10px; z-index:2; height:20px; text-align:center; padding-right:20px;}
+.control p{ width:980px; margin:0 auto; text-align:center}
+.control span{ width:12px; height:12px; margin:0 3px; display:inline-block; background:#fff; cursor:pointer; text-align:center; color:#fff; line-height:12px;}
+.ibC{ background:#6c6c6c !important;}
+.tbcur{ background-position:0 -11px !important}
+
+/*���Ź���*/
+.news{ background:url(../bg/IndexPublicBg.jpg) repeat-x; line-height:39px; width:100%; overflow:hidden;}
+.news a:hover{ text-decoration:underline}
+.news strong{ font-size:14px; color:#0067ac;font-family:"Microsoft YaHei"; font-weight:normal; float:left; margin-right:10px;}
+.news strong a{ font-size:14px; color:#0067ac;font-family:"Microsoft YaHei"; font-weight:normal; float:left; margin-right:10px;}
+.share_a{ float:right; font-family:"Microsoft YaHei"; font-size:14px; _margin-top:8px;height:30px;width:160px;line-height:30px}
+.gzwm{float:left}
+.share_a a{  float:left;margin-top:6px;margin-left:3px}
+
+#div1{ width:500px; height:39px; overflow:hidden;float:left}
+.IndexM{font-family:"Microsoft YaHei"; overflow:hidden; width:120%;}
+
+.IndexM li{ width:319px; height:300px; border:1px solid #ddd; border-bottom:2px solid #c2c2c2; background:#fff; float:left; margin:0 10px 0 0;}
+.IndexM li h3{ margin:0 19px; font-size:18px; text-align:center; border-bottom:1px solid #ddd; line-height:20px; font-weight:normal; padding:10px 0}
+.IndexM li h3 a{ color:#0067ac;}
+.IndexM li h4{margin:0 19px; font-size:12px; text-align:left;line-height:22px; font-weight:normal;padding:10px 0}

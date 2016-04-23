@@ -16,29 +16,28 @@ import tornado.web
 import tornado.wsgi
 import sys
 import os
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "mysite.settings")
+os.environ.setdefault( "DJANGO_SETTINGS_MODULE", "mysite.settings" )
 django.setup()
 
 
 
-def main(port):
-
-  parse_command_line()
-  wsgi_app = tornado.wsgi.WSGIContainer(
-    django.core.handlers.wsgi.WSGIHandler())
-  tornado_app = tornado.web.Application(
-    [
-      ('.*', tornado.web.FallbackHandler, dict(fallback=wsgi_app)),
-      ])
-  server = tornado.httpserver.HTTPServer(tornado_app)
-  server.listen(port)
-  tornado.ioloop.IOLoop.instance().start()
+def main( port ):
+    parse_command_line()
+    wsgi_app = tornado.wsgi.WSGIContainer( 
+      django.core.handlers.wsgi.WSGIHandler() )
+    tornado_app = tornado.web.Application( 
+      [
+        ( '.*', tornado.web.FallbackHandler, dict( fallback = wsgi_app ) ),
+        ] )
+    server = tornado.httpserver.HTTPServer( tornado_app )
+    server.listen( port )
+    tornado.ioloop.IOLoop.instance().start()
 
 
 if __name__ == '__main__':
     try:
         import setproctitle
-        setproctitle.setproctitle('www:' + sys.argv[1])
+        setproctitle.setproctitle( 'www:' + sys.argv[1] )
     except ImportError:
         pass
-    main(int(sys.argv[1]))
+    main( int( sys.argv[1] ) )

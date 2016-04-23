@@ -1,0 +1,1753 @@
+@charset "utf-8";
+/* CSS Document */
+/*2013.4.8 lyw*/
+
+html,
+body,
+div,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+li,
+dt,
+dd,
+p,
+blockquote,
+pre,
+form,
+fieldset,
+table,
+th,
+td,
+span,
+input,
+textarea {
+    margin: 0;
+    padding: 0;
+}
+
+*html {
+    /*background-image:url(about:blank);background-attachment:fixed;*/
+}
+
+body {
+    font-size: 12px;
+    line-height: 20px;
+    color: #666;
+    position: relative;
+}
+
+.CaseBox p {
+    text-indent: 24px;
+    font-size: 13px;
+    color: #444444
+}
+
+li,
+ol {
+    list-style: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+i,
+em {
+    font-style: normal;
+}
+
+a {
+    text-decoration: none;
+    color: #666;
+}
+
+a:hover {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a:active {
+    star: expression(this.onFocus=this.blur());
+}
+
+:focus {
+    outline: 0;
+}
+
+.clear {
+    clear: both;
+    line-height: 0px;
+    overflow: hidden;
+    zoom: 1;
+    font-size: 0px;
+    content: '.';
+}
+
+a img {
+    border: none;
+}
+
+li.clear {
+    float: none;
+    width: auto;
+    height: auto;
+    padding: 0;
+    margin: 0;
+}
+
+input {
+    border: 0 none;
+    padding: 0px;
+    margin: 0px;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.pr {
+    position: relative;
+}
+
+.pa {
+    position: absolute;
+}
+
+.ftms {
+    font-family: "Microsoft YaHei"
+}
+/*文字靠边*/
+
+.tl {
+    text-align: left!important;
+}
+
+.tc {
+    text-align: center!important;
+}
+
+.tr {
+    text-align: right!important;
+}
+/*缩进*/
+
+.ti2 {
+    text-indent: 2em;
+}
+/*字体粗细*/
+
+.fb {
+    font-weight: bold;
+}
+
+.fn {
+    font-weight: normal;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.mm {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.bd1 {
+    border: 1px solid #ddd;
+}
+/*显示*/
+
+.dil {
+    display: inline;
+}
+
+.bk {
+    display: block !important;
+}
+
+.dn {
+    display: none;
+}
+
+.od {
+    overflow: hidden
+}
+/*自定义*/
+/*行高*/
+
+.lh18 {
+    line-height: 18px;
+}
+
+.lh20 {
+    line-height: 20px;
+}
+
+.lh22 {
+    line-height: 22px;
+}
+
+.lh24 {
+    line-height: 24px;
+}
+
+.lh25 {
+    line-height: 25px;
+}
+
+.lh26 {
+    line-height: 26px;
+}
+
+.lh30 {
+    line-height: 30px;
+}
+
+.lh40 {
+    line-height: 40px;
+}
+/*字体大小*/
+
+.f12 {
+    font-size: 12px;
+}
+
+.f14 {
+    font-size: 14px;
+}
+
+.f16 {
+    font-size: 16px;
+}
+
+.f18 {
+    font-size: 18px;
+}
+
+.f20 {
+    font-size: 20px;
+}
+/*间距与填充*/
+
+.nbg {
+    background: none !important;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.mt15 {
+    margin-top: 15px;
+}
+
+.mt20 {
+    margin-top: 20px
+}
+
+.pd15 {
+    padding: 0px 15px;
+}
+
+.wa {
+    width: 100%;
+}
+
+.zh {
+    word-break: break-all;
+}
+/* 强制转行 */
+
+.dq {
+    text-align: justify
+}
+/* 两边对齐 */
+
+.w980 {
+    width: 980px;
+}
+
+.black {
+    color: #333
+}
+/*共用样式*/
+
+.header {
+    height: 135px;
+    background: url(../bg/headerBg.jpg) repeat-x;
+    position: relative;
+    z-index: 99999
+}
+
+.headerMid {}
+
+.logo {
+    width: 174px;
+    height: 60px;
+    display: inline-block;
+    background: url(../ico/logo.png) no-repeat;
+    text-indent: -9999px;
+    text-align: left;
+    margin: 20px 0 0 0;
+    float: left
+}
+
+.fav {
+    float: right;
+    margin-top: 40px;
+    width: 800px;
+    height: 43px;
+}
+
+.fav a,
+.fav i {
+    margin: 0 5px;
+    float: right
+}
+
+.open_app {
+    background: url("../images/appopen.png") no-repeat 0 3px;
+    text-indent: 20px;
+}
+
+.open_weibo {
+    background: url("../images/weiboopen.jpg") no-repeat 0 3px;
+    text-indent: 20px;
+}
+
+.open_rss {
+    text-indent: 20px;
+}
+
+.open_weixin {
+    background: url("/skins/images/weixin.png") no-repeat 0 3px;
+    text-indent: 20px;
+}
+
+.search {
+    background: url(../bg/searchBg.jpg) no-repeat;
+    width: 174px;
+    height: 21px;
+    line-height: 21px;
+    float: right;
+    margin-left: 15px;
+    display: inline;
+}
+
+.seaIn,
+.seaBtn {
+    background: none;
+    float: left;
+}
+
+.seaBtn {
+    width: 30px;
+    height: 21px;
+    float: left;
+    cursor: pointer
+}
+
+.seaIn {
+    width: 131px;
+    padding-left: 10px;
+    color: #666;
+    line-height: 21px;
+    height: 21px;
+}
+
+.seaBtn {
+    cursor: pointer;
+}
+
+.area {
+    width: 60px;
+    position: relative;
+    float: right;
+    background: #fff;
+}
+
+.area span {
+    background: url(../ico/ico_2.gif) no-repeat right center;
+    display: block;
+}
+
+.area p {
+    position: absolute;
+    left: 0px;
+    top: 18px;
+    background: #fff;
+    border: 1px solid #ddd;
+    width: 112px;
+    display: none;
+    z-index: 999;
+    overflow: hidden;
+}
+
+.area p a {
+    margin: 0;
+    display: block;
+    float: left;
+    padding: 0 5px 5px 30px;
+    width: 70px;
+    display: inline-block;
+}
+
+.area p a.flag01 {
+    background: url(/static/skins/images/flags_01.jpg) no-repeat 5px center;
+}
+
+.area p a.flag02 {
+    background: url(/static/skins/images/flags_02.jpg) no-repeat 5px center;
+}
+
+.area p a.flag03 {
+    background: url(/static/skins/images/flags_03.jpg) no-repeat 5px center;
+}
+
+.area p a.flag04 {
+    background: url(/static/skins/images/flags_04.jpg) no-repeat 5px center;
+}
+
+.area p a:hover {
+    background: #aaa;
+    color: #fff
+}
+
+.userste {
+    float: right
+}
+/*头部导航*/
+
+.nav {
+    width: 100%;
+    float: left;
+    margin-top: 8px;
+}
+
+.nav>ul {
+    position: relative;
+}
+
+.nav>ul>li {
+    width: 131px;
+    float: left;
+    line-height: 44px;
+    text-align: center;
+    /*position: relative;*/
+
+    z-index: 9;
+}
+
+.nav>ul>li>a {
+    font-size: 15px;
+    font-family: "Microsoft YaHei";
+    color: #fff;
+    display: block
+}
+
+.nav .cur {
+    background-image: url(../bg/navCur.jpg);
+    color: #0067ac
+}
+
+.nav li a:hover {
+    background-image: url(../bg/navCur.jpg);
+    color: #0067ac
+}
+/*下拉菜单*/
+
+.Drop {
+    position: absolute;
+    z-index: 9;
+    top: 44px;
+    font-size: 12px;
+    display: none;
+    left: -130px;
+}
+
+.DropBox {
+    background: url(../bg/DropMid.png) repeat-x left bottom #f2f1f1;
+    border-left: 1px solid #eaeaea;
+    border-right: 1px solid #eaeaea;
+    padding: 10px;
+}
+
+.DropL {
+    background: url(../bg/DropLBtm.png) no-repeat;
+    width: 11px;
+    height: 10px;
+}
+
+.DropM {
+    background: url(../bg/DropBtmBg.png) repeat-x;
+    width: 1000px;
+}
+
+.DropR {
+    background: url(../bg/DropRBtm.png) no-repeat;
+    width: 11px;
+    height: 10px;
+}
+/*下拉菜单 产品*/
+/*.D_pro table{ width:1006px;}*/
+
+.D_pro table {
+    width: 1129px;
+}
+
+.DProList {}
+
+.DProList dl {
+    width: 110px;
+    float: left;
+    text-align: left;
+    padding: 0 8px 0 5px;
+}
+
+.DProList dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333
+}
+
+.DProList dl dt a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333
+}
+
+.DProList dl dt a:hover {
+    background: none;
+}
+
+.DProList dl dd {
+    width: 100%;
+    line-height: 16px;
+    padding: 6px 0;
+}
+
+.DProList dl dd a {
+    font-size: 12px;
+    color: #666;
+    font-family: "宋体";
+}
+
+.DProList dl a:hover {
+    background: none;
+}
+
+.open_daogou {
+    float: left;
+    width: 200px;
+    text-align: left
+}
+
+.open_daogou a {
+    background: url(/skins/images/open_daogou.png) no-repeat !important;
+    color: #333333 !important
+}
+
+.open_daogou a:hover {
+    background: url(/skins/images/open_daogou.png) no-repeat !important;
+    color: #0067ac !important
+}
+
+.open_yanshi {
+    float: left;
+    width: 150px;
+    text-align: left
+}
+
+.open_yanshi a {
+    background: url(/skins/images/open_yanshi.png) no-repeat !important;
+    color: #333333 !important
+}
+
+.open_yanshi a:hover {
+    background: url(/skins/images/open_yanshi.png) no-repeat !important;
+    color: #0067ac !important
+}
+/*下拉菜单 行业*/
+
+.D_case table {
+    width: 1040px;
+}
+
+.DCaseList {
+    margin: 17px 30px 20px 30px;
+}
+
+.DCLeft,
+.DCRight {
+    height: 280px;
+}
+
+.DCLeft {
+    width: 705px;
+    float: left;
+    border-right: 1px solid #d9d8d8;
+}
+
+.DCLeft dl {
+    width: 175px;
+    float: left;
+    text-align: left;
+    height: 150px;
+}
+
+.DCLeft dl dt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.DCLeft dl dt a {
+    color: #333
+}
+
+.DCLeft dl dd {
+    width: 80px;
+    margin-right: 5px;
+    float: left
+}
+
+.DCLeft dl dd a {
+    color: #666;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 16px;
+    padding: 6px 0;
+}
+
+.DCLeft dl a:hover {
+    background: none;
+}
+
+.DCHBLeft {
+    height: 200px;
+}
+
+.DCHBLeft {
+    width: 240px;
+    float: left;
+    border-right: 1px solid #d9d8d8;
+}
+
+.DCHBLeft dl {
+    width: 230px;
+    float: left;
+    text-align: left;
+}
+
+.DCHBLeft dl dt {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.DCHBLeft dl dt a {
+    color: #333
+}
+
+.DCHBLeft dl dd {
+    width: 40%;
+    margin-right: 5%;
+    float: left
+}
+
+.DCHBLeft dl dd a {
+    color: #666;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    line-height: 16px;
+    padding: 6px 0;
+}
+
+.DCHBLeft dl a:hover {
+    background: none;
+}
+
+.DCRight {
+    width: 220px;
+    float: left;
+    border-left: 1px solid #fff;
+    padding: 0 15px;
+}
+
+.DCVideo {
+    width: 209px;
+    height: 173px;
+    background: url(../bg/bg_1.gif) no-repeat;
+    padding: 7px 7px 7px 7px;
+}
+
+.DCInfo {
+    margin-top: 5px;
+    line-height: 24px;
+    color: #999;
+    text-align: left
+}
+/*下拉菜单 服务支持*/
+
+.D_tech {
+    left: -150px;
+}
+
+.D_tech table {
+    width: 710px;
+}
+
+.DTechList {
+    margin: 25px 0;
+}
+
+.DTLeft {
+    width: 140px;
+    padding: 0 10px;
+    float: left;
+    border-right: 1px solid #d9d8d8;
+}
+
+.DTLeft dl dd {
+    background: url(../ico/ico_5.png) no-repeat left 12px;
+    padding: 6px 0 6px 14px;
+}
+
+.DTLeft dl dd a {
+    color: #333;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: left;
+    font-family: "Microsoft YaHei";
+}
+
+.DTLeft dl dd a:hover {
+    background: none !important;
+}
+
+.DTRight {
+    width: 490px;
+    float: left;
+    border-left: 1px solid #fff;
+    padding: 0 10px;
+}
+
+.DTRight dl {
+    width: 223px;
+    float: left;
+    margin: 0 10px;
+}
+
+.DTRight dl dt {
+    width: 209px;
+    height: 173px;
+    background: url(../bg/bg_1.gif) no-repeat;
+    padding: 7px 7px 7px 7px;
+}
+
+.DTRight dl dd {
+    margin-top: 5px;
+    line-height: 24px;
+    color: #999;
+    text-align: left;
+    font-family: "Microsoft YaHei";
+}
+/*下拉菜单 关于我们*/
+
+.D_about {
+    left: -630px;
+}
+
+.DAboutList {
+    width: 878px;
+    padding: 0 15px;
+}
+
+.D_about table {
+    width: 930px;
+}
+
+.D_about dl {
+    width: 100px;
+    float: left;
+    text-align: left;
+    padding: 0 8px 0 5px;
+}
+
+.D_about dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333
+}
+
+.D_about dl dt a {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333333
+}
+
+.D_about dl a:hover {
+    background: none;
+}
+
+.D_about dl dd {
+    width: 100%;
+    line-height: 16px;
+    padding: 6px 0;
+}
+
+.D_about dl dd a {
+    font-size: 12px;
+    color: #666;
+    font-family: "Microsoft YaHei";
+}
+
+.D_about dl dd a:hover {
+    background: none;
+}
+
+.tel {
+    font-family: "Microsoft YaHei";
+    line-height: 20px !important;
+}
+
+.tel b {
+    color: #e60000;
+    font-size: 20px;
+    font-family: "Microsoft YaHei";
+    line-height: 40px;
+    font-weight: normal
+}
+/*下拉菜单 合作伙伴*/
+
+.D_coop {
+    left: -200px;
+}
+
+.DCoopList {
+    width: 540px;
+    padding: 0 10px;
+}
+
+.D_coop table {
+    width: 560px;
+    text-align: left
+}
+
+.DPleft {
+    border-right: 1px solid #d9d8d8;
+    float: left;
+    width: 214px;
+    padding: 0 20px;
+}
+
+.DPleft h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.DPleft h3 a {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.DPleft h3 a:hover {
+    background: none !important;
+}
+
+.DPleft div {
+    line-height: 24px;
+    color: #999;
+}
+
+.DPright {
+    width: 220px;
+    float: left;
+    border-left: 1px solid #fff;
+    padding: 0 30px;
+}
+
+.DPright h3 {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.DPright h3 a {
+    font-size: 14px;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.DPright h3 a:hover {
+    background: none;
+}
+
+.DPright dl dd {
+    width: 100%;
+    overflow: hidden;
+    line-height: 24px;
+    padding: 5px 0;
+    text-align: left;
+    font-family: "Microsoft YaHei";
+}
+
+.DPright dl dd a {
+    text-align: left;
+    color: #999;
+    font-size: 12px;
+}
+
+.DPright dl dd a:hover {
+    background: none;
+}
+
+.DPright dl dd span {
+    width: 50px;
+    float: left;
+    text-align: right;
+}
+
+.InP_1 {
+    width: 137px;
+    height: 20px;
+    line-height: 28px;
+    border: 1px solid #ddd;
+    background: #f2f1f1;
+    color: #666;
+}
+
+.Btn_1 {
+    width: 74px;
+    height: 30px;
+    display: inline-block;
+    background: url(../ico/ico_7.gif) no-repeat;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 30px !important;
+    cursor: pointer;
+}
+
+.Btn_ZhuanTi {
+    display: inline-block;
+    background: url(../ico/ico_7.gif) no-repeat;
+    color: #fff;
+    font-family: "微软雅黑";
+    font-size: 16px;
+    line-height: 30px !important;
+    cursor: pointer;
+    padding: 0 10px;
+    margin-left: 5px;
+}
+/*头部导航 end*/
+/*footer*/
+
+.footer {
+    width: 100%;
+    background: url(../bg/footerbg.jpg) no-repeat center top #5b5b5b;
+    height: 365px;
+    margin-top: 29px;
+    font-family: "Microsoft YaHei";
+    position: relative;
+}
+
+.footer a {
+    color: #fff
+}
+
+.footer dl {
+    width: 160px;
+    float: left;
+    margin: 20px 0 0 0;
+    height: 300px;
+}
+
+.footer dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 30px;
+    padding: 0 0 10px 0
+}
+
+.footer dl dd {
+    line-height: 24px;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.copy {
+    border-top: 1px solid #464646;
+    line-height: 30px;
+    color: #fff;
+}
+
+.copy a {
+    margin: 0 5px;
+}
+
+.copy p {
+    border-top: 1px solid #6b6b6b
+}
+/*友情链接*/
+
+.linklist {
+    display: inline;
+    float: left;
+    margin-left: 20px;
+    padding-bottom: 40px;
+}
+
+.linklist li {
+    border-bottom: 1px dashed #C7C7C7;
+    display: inline;
+    float: left;
+    margin-top: 25px;
+    padding-bottom: 5px;
+    padding-right: 25px;
+}
+/*法律声明*/
+
+.falv {
+    margin-left: 20px;
+    margin-top: 15px;
+    padding-bottom: 40px;
+    width: 940px;
+}
+
+.falv p {
+    color: #7B8094;
+    float: left;
+    line-height: 21px;
+    margin-top: 12px;
+    width: 940px;
+}
+/*网站地图*/
+
+.websiteList {
+    float: left;
+    width: 290px;
+    margin-left: 10px;
+    margin-right: 10px;
+    display: inline;
+    height: 225px;
+}
+
+.websiteList dt {
+    width: 100%;
+    border-bottom: 1px #eaeaea dashed;
+    padding-bottom: 5px;
+}
+
+.websiteList dd {
+    width: 100%;
+    margin-top: 10px;
+}
+
+.websiteList dd a {
+    float: left;
+    white-space: nowrap;
+    margin-right: 15px;
+    display: inline;
+    line-height: 24px;
+}
+
+.websiteList dd em {
+    font-family: "Courier New", Courier, monospace;
+    padding-right: 3px;
+}
+/*下拉菜单 产品修改2013.11.29*/
+
+.D_pro table {
+    width: 950px;
+}
+
+.DProList {
+    overflow: hidden;
+}
+
+.projectcenter_left {
+    float: left;
+    width: 386px;
+    border-right: 1px solid #d9d9d9;
+    /*height:355px;*/
+
+    overflow: hidden;
+    margin-top: 5px;
+    margin-left: 20px;
+    display: inline;
+}
+
+.projectcenter01 {
+    float: left;
+    width: 193px;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.projectcenter01 li {
+    margin-bottom: 22px;
+    width: 193px;
+}
+
+.projectcenter01 li a {
+    display: block;
+    background: url(../hey-img/arrow01.png) no-repeat left center;
+    color: #333;
+    font-size: 14px;
+    height: 14px;
+    line-height: 14px;
+    padding-left: 12px;
+    width: 180px;
+    text-align: left;
+}
+
+.projectcenter01 li a:hover {
+    text-decoration: underline;
+    background: url(../hey-img/arrow01.png) no-repeat left center;
+}
+
+.projectcenter_right {
+    float: left;
+    width: 450px;
+    border-left: 1px solid #fff;
+    height: 290px;
+    margin-top: 5px;
+    padding-left: 60px;
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+.project {
+    overflow: hidden;
+    background: url(../hey-img/projectbg.jpg) no-repeat;
+    width: 536px;
+    height: 327px;
+    position: relative;
+}
+
+.project_img1 {
+    position: absolute;
+    left: 20px;
+    top: 15px;
+}
+
+.project_img2 {
+    position: absolute;
+    left: 295px;
+    top: 20px;
+}
+
+.project_img3 {
+    position: absolute;
+    left: 20px;
+    top: 190px;
+}
+
+.project_img4 {
+    position: absolute;
+    left: 280px;
+    top: 222px;
+}
+
+.project a:hover {
+    background: none;
+}
+
+.nav li .project a:hover {
+    background-image: none
+}
+/*20131226*/
+
+.pro_project {
+    overflow: hidden
+}
+
+.nav li .pro_buy {
+    /*background:url(../bg/pro_buy.jpg) no-repeat;*/
+
+    width: 100px;
+    padding-left: 102px;
+    height: 77px;
+    line-height: 82px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    text-align: left;
+    margin-right: 5px;
+}
+
+.nav li .pro_buy:hover {
+    background: url(../bg/pro_buy.jpg) no-repeat;
+    color: #fff
+}
+
+.nav li .pro_show {
+    /*background:url(../bg/pro_show.jpg) no-repeat;*/
+
+    width: 100px;
+    padding-left: 102px;
+    height: 77px;
+    line-height: 82px;
+    display: block;
+    float: left;
+    font-size: 14px;
+    text-align: left
+}
+
+.nav li .pro_show:hover {
+    background: url(../bg/pro_show.jpg) no-repeat;
+    color: #fff
+}
+
+.pro_pimg {
+    overflow: hidden;
+    margin: 29px 0 0;
+    border: 1px solid #dedede;
+    padding: 2px 0 2px 2px;
+    width: 402px;
+}
+
+.pro_pimg a {
+    float: left;
+    overflow: hidden;
+    display: block;
+    margin-right: 3px;
+}
+
+.pro_pimg a img {
+    display: block;
+    overflow: hidden
+}
+
+.nav li .pro_pimg a:hover {
+    background: none;
+}
+
+.advertise {
+    z-index: 999;
+    position: absolute;
+    right: 0;
+    bottom: 365px;
+    width: 200px;
+    height: auto;
+    text-align: center;
+    padding: 10px 5px;
+    border: 1px solid #ccc;
+    background: #fff;
+}
+
+.adv_title {
+    hieght: 60px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+.adv_cont {
+    padding: 0 2px;
+}
+
+.adv_cont span {
+    color: #0067ac;
+    margin: 10px 0;
+    display: inline-block;
+    text-decoration: none;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.adv_word {
+    text-align: left;
+    font-size: 12;
+    color: #999;
+    display: none;
+}
+/* -----------------------------Nav Pro 产品中心的CSS开始---------------------------- */
+
+.nav_pro {
+    background: #fff;
+    border: 1px solid #999;
+    border-top: 0;
+    width: 958px;
+    position: absolute;
+    top: 44px;
+    _top: 43px;
+    right: 0;
+    overflow: hidden;
+    background: url(../bg/DropMid.png) repeat-x left bottom #f2f1f1;
+}
+/* 下拉菜单的边框*/
+/* 下拉菜单的上面的蓝色条开始 */
+
+.nav_sub {
+    /*    background: #0184cd url(../images/nav_sub_bar.jpg) no-repeat;
+*/
+
+    height: 30px;
+    /*background:rgb(100, 96, 95);*/
+
+    background: #f2f1f1;
+}
+
+.nav_sub ul {
+    padding: 2px 14px 0 14px;
+    font-size: 14px;
+}
+
+.nav_sub li {
+    float: left;
+    line-height: 26px;
+    margin: 0 8px;
+    _display: inline;
+    color: #4C4847;
+    font-weight: bold;
+    display: block;
+    text-align: left;
+}
+
+.notes_l {
+    color: #fff;
+    font-size: 14px;
+    float: left;
+    width: 700px;
+}
+
+.notes_l a {
+    color: #4C4847;
+}
+
+.notes_l a:hover {
+    color: #ff4400;
+}
+
+.notes_r {
+    color: #fff;
+    font-size: 12px;
+    float: right;
+    text-align: right;
+    padding-right: 5px;
+    width: 190px;
+}
+
+.notes_r a {
+    color: #4C4847;
+}
+
+.notes_r a:hover {
+    color: #ff4400;
+}
+
+.nav_sub li a span {
+    display: block;
+    padding-right: 18px;
+}
+
+.nav_sub li.notes_l {
+    width: 200px;
+}
+/* 下拉菜单的上面的蓝色条结束 */
+/* 下拉菜单的主体部分开始 */
+
+.nav_sub_cnt {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.nav_sub_cnt dl {
+    float: left;
+    border-left: 1px solid #ccc;
+    height: 230px;
+    width: 180px;
+    padding-left: 10px;
+    margin-left: -1px;
+    overflow: hidden;
+    *zoom: 1;
+}
+/* margin-left:-1px 就是将第一格的左边的线隐藏起来*/
+
+.nav_sub_cnt dt {
+    margin-bottom: 4px;
+}
+
+.nav_sub_cnt dt span {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.nav_sub_cnt dt span a,
+.nav_sub_cnt_03 dt span a {
+    font-size: 16px;
+    color: #990000;
+    line-height: 20px;
+}
+
+.nav_sub_cnt dt span a:hover,
+.nav_sub_cnt_03 dt span a:hover,
+.nav_sub_cnt dt a:hover,
+.nav_sub_cnt_03 dt a:hover {
+    font-size: 16px;
+    color: #ff4400;
+    background: none;
+}
+
+.nav_sub_cnt dd a:hover,
+.nav_sub_cnt_03 dd a:hover {
+    background: none;
+    color: #f40;
+}
+
+.nav> ul {
+    width: 980px;
+    margin: 0 auto;
+}
+
+.img1 {
+    border: 1px solid #ccc;
+    padding: 2px;
+    background: #fff;
+}
+/* 下拉菜单的主体部分结束 */
+/* -----------------------------Nav Pro 产品中心的CSS结束---------------------------- */
+
+.InP_1 {
+    line-height: 20px;
+    padding: 0 4px;
+    margin-left: 4px;
+}
+
+.nav_sub li.notes_r {
+    color: #4C4847;
+    font-size: 12px;
+    float: right;
+    text-align: right;
+    padding-right: 5px;
+    width: 190px;
+}
+/* ------------------------------关于我们的CSS开始--------------------------- */
+
+.nav_sve {
+    background: #fff;
+    border: 1px solid #999;
+    border-top: 0;
+    width: 958px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    top: 44px;
+    _top: 43px;
+    overflow: hidden;
+    background: url(../bg/DropMid.png) repeat-x left bottom #f2f1f1;
+}
+
+.nav_sub_cnt_05 {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.nav_sub_cnt_05 dl {
+    float: left;
+    border-left: 1px solid #ccc;
+    height: 260px;
+    padding-left: 20px;
+    margin-left: -1px;
+}
+
+.nav_sub_cnt_05 dt {
+    margin-bottom: 4px;
+}
+
+.nav_sub_cnt_05 dt span {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.nav_sub_cnt_05 dt span a {
+    font-size: 16px;
+    color: #990000;
+}
+
+.nav_sub_cnt_05 dt span a:hover {
+    font-size: 16px;
+    color: #ff4400;
+}
+
+.nav_sub_cnt_05 dd {
+    float: left;
+    width: 75px;
+    height: 26px;
+    overflow: hidden;
+    padding-left: 10px;
+    line-height: 26px;
+    background: url(../images/back_55.jpg) 3px 10px no-repeat;
+}
+
+.nav_sub_cnt_05 dd p {
+    margin-bottom: 5px;
+}
+/* ------------------------------Nav Sve 解决方案的CSS结束--------------------------- */
+/* ------------------------------ 服务中心的CSS开始--------------------------- */
+
+.nav_sve {
+    background: #fff;
+    border: 1px solid #999;
+    border-top: 0;
+    width: 958px;
+    position: absolute;
+    left: 0;
+    z-index: 2;
+    top: 44px;
+    _top: 43px;
+    overflow: hidden;
+    background: url(../bg/DropMid.png) repeat-x left bottom #f2f1f1;
+}
+
+.nav_sub_cnt_03 {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.nav_sub_cnt_03 dl {
+    float: left;
+    border-left: 1px solid #ccc;
+    height: 210px;
+    padding-left: 20px;
+    margin-left: -1px;
+}
+
+.nav_sub_cnt_03 dt {
+    margin-bottom: 4px;
+}
+
+.nav_sub_cnt_03 dt span {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.nav_sub_cnt_03 dt span a,
+.nav_sub_cnt_02 dt span a {
+    font-size: 16px;
+    color: #990000;
+    line-height: 20px;
+    font-weight: normal;
+}
+
+.nav_sub_cnt_03 dt span a:hover {
+    font-size: 16px;
+    color: #ff4400;
+}
+
+.nav_sub_cnt_03 dd p {
+    margin-bottom: 5px;
+}
+
+.inputbox_menu {
+    width: 165px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+/* ------------------------------服务中心的CSS结束--------------------------- */
+
+.nav_sve,
+.nav_pro {
+    text-align: left;
+    left: 0;
+}
+
+.nav_sub_cnt dd,
+.nav_sub_cnt_02 dd,
+.nav_sub_cnt_03 dd {
+    color: #ccc;
+    height: 24px;
+    line-height: 24px;
+    overflow: hidden;
+    padding-left: 10px;
+    line-height: 24px;
+    background: url(../images/back_55.jpg) 3px 10px no-repeat;
+}
+
+.nav_sub_cnt_03 .doc_input {
+    line-height: 23px;
+}
+
+.nav_sub_cnt_03 .doc_input>input {
+    float: left;
+}
+
+.nav_sub_cnt dd a,
+.nav_sub_cnt_03 dd a {
+    color: #666;
+    font-family: "Microsoft YaHei";
+    font-size: 12px;
+    padding: 6px 0;
+    display: inline;
+}
+
+.inputbox_menu {
+    width: 165px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 12px;
+    color: #666;
+    border: 1px solid #ccc;
+    padding-left: 5px;
+}
+/*中间的热门推荐*/
+
+.solution_u {
+    width: 50%;
+    float: left;
+    overflow: hidden;
+}
+
+.solution_l {
+    width: 74px;
+    padding-right: 10px;
+    *padding-right: 10px !important;
+    *padding-right: 0px;
+    float: left;
+    padding-bottom: 30px;
+}
+
+.solution_r {
+    width: 140px;
+    float: left;
+    font-size: 12px;
+    color: #555;
+    line-height: 20px
+}
+
+.img1 {
+    border: 1px solid #ccc;
+    padding: 2px;
+    background-back: #fff;
+}
+/* ------------------------------Nav Sve 解决方案的CSS开始--------------------------- */
+
+.nav_sve {
+    background: #fff;
+    border: 1px solid #999;
+    border-top: 0;
+    width: 958px;
+    position: absolute;
+    right: 0;
+    z-index: 2;
+    top: 44px;
+    _top: 43px;
+    overflow: hidden;
+    background: url(../bg/DropMid.png) repeat-x left bottom #f2f1f1;
+}
+
+.nav_sub_cnt_02 {
+    padding-top: 15px;
+    padding-bottom: 25px;
+    overflow: hidden;
+    *zoom: 1;
+}
+
+.nav_sub_cnt_02 dl {
+    float: left;
+    border-left: 1px solid #ccc;
+    height: 260px;
+    padding-left: 10px;
+    margin-left: -1px;
+}
+
+.nav_sub_cnt_02 dt {
+    margin-bottom: 4px;
+}
+
+.nav_sub_cnt_02 dt span {
+    font-size: 16px;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Microsoft YaHei";
+}
+
+.nav_sub_cnt_02 dt span a {
+    font-size: 16px;
+    color: #990000;
+}
+
+.nav_sub_cnt_02 dt span a:hover {
+    font-size: 16px;
+    color: #ff4400;
+}
+
+.nav_sub_cnt_02 dl dd {
+    float: left;
+    width: 75px;
+    height: 26px;
+    overflow: hidden;
+    padding: 0;
+    padding-left: 10px;
+    line-height: 26px;
+    background: url(../images/back_55.jpg) 3px 10px no-repeat;
+}
+
+.nav_sub_cnt_02 dd p {
+    margin-bottom: 5px;
+}
+
+.leftlinks {
+    DISPLAY: inline-block;
+    FONT-SIZE: 14px;
+    BCOLOR: #666;
+    LINE-HEIGHT: 24px;
+    ZOOM: 1;
+}
+
+.leftlinks:hover {
+    COLOR: #e50000;
+}
+
+.opli {
+    width: 100%
+}
+
+.opli li h4 {
+    background-color: #ffffff;
+    padding: 5px
+}
+
+.opli li a {
+    font-size: 12px;
+    line-height: 18px;
+}
+/*市场活动 更多*/
+.ldsh{ width:974px; margin-left:4px; border:1px solid #ddd;background:#fafafa; }
+.ldshBox{padding:10px 20px; overflow:hidden}
+.ldshBox ul{ }
+.ldshBox ul li{ width:90%; overflow:hidden; padding:8px 0;border-bottom:1px solid #eee}
+.ldshBox ul li img{ padding:3px; border:1px solid #ddd; float:left; margin:0 13px 0 0; box-shadow:0 0 3px #CCC;}
+.ldshBox ul li h3 { font-size:15px; color:#0067ac;font-family:"微软雅黑";}
+.ldshBox ul li h4{ font-size:12px; font-weight:normal; padding:10px 0}
+.ldshBox ul li h5{ font-size:12px; font-weight:normal;}
