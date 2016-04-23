@@ -18,6 +18,7 @@ from django.contrib import admin
 from polls import views
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
-    url(r'^$', views.home, name='home')
+    url( r'^admin/', admin.site.urls ),
+    url( r'^$', views.home, name = 'home' ),
+    url( r'^(\w+).html$', views.home, name = 'home' ),
 ]
