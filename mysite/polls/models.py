@@ -25,7 +25,7 @@ class ProductType( models.Model ):
 class Product( models.Model ):
 
     name = models.CharField( u'名字', max_length = 30 )
-    ptype = models.ForeignKey( ProductType )
+    ptype = models.ForeignKey( ProductType, verbose_name = u'类型' )
     img1 = models.ImageField( u'图片' )
     detail1 = models.TextField( u'产品概览' )
     detail2 = models.TextField( u'详细参数' )
