@@ -1,0 +1,53 @@
+{% extends  'base.html' %}
+
+{% block main %}
+
+{% include  '_pretitle.html' %}
+
+<div class="main w980 mm mt20 od">
+  {% include  '_path.html' %}
+  
+  {% include  '_sidebar.html' %}
+  
+  <div class="rightCon">
+    <div class="proSearch">
+      <div class="proSTop">
+      </div>
+      <div class="proSMid">
+        <form target="_blank" action="/search.html" id="ajaxElement_2_917">  
+          <span>产品查询：</span>
+          <input type="text" onblur="if(this.value == &quot;&quot;) this.value=&quot;请输入关键字&quot;;" onfocus="if(this.value == &quot;请输入关键字&quot;) this.value=&quot;&quot;;" value="请输入关键字" class="InP_6" id="word">
+          <input type="button" value="搜 索" onclick="document.getElementById('ajaxElement_2_917').submit();return false;" class="Btn_2">
+        <input type="hidden" value="1" name="channelID" id="channelID"></form>
+      </div>
+        <div class="proSBtm">
+        </div>
+        </div>
+        <div class="wa od mt15">
+          <div class="proList">
+            <ul>
+               
+            <li style="background-position: 0px 0px;">
+              <img alt=".gifS8856G万兆交换机" src="/static/upload/images/2015/6/2163848271.jpg">
+              <h4 class="mt15">
+                <a title=".gifS8856G万兆交换机" target="_blank" href="/products/2/1.html">.gifS8856G万兆交换机
+                </a></h4>
+              <p title=""></p>
+              <div class="proLiLK">
+                <a class="axz" title="相关下载" target="_blank" href="/products/2/1.html#name1">相关下载</a> 
+                <a class="acs" title="技术参数" target="_blank" href="/products/2/1.html#name2">技术参数</a>
+                <a class="ams" title="产品描述" target="_blank" href="/products/2/1.html#name3">产品描述</a></div>
+            </li>
+               
+               
+              
+            </ul>
+          </div>
+          <div class="page">
+            
+          </div>
+        </div>
+        </div>
+        </div>
+        
+{% endblock %}

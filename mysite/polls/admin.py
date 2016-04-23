@@ -4,16 +4,18 @@ from django.contrib import admin
 
 from models import ProductType, Product
 
-# Register your models here.
 
-admin.site.register( ProductType )
+@admin.register( ProductType )
+class ProductTypeAdmin( admin.ModelAdmin ):
+
+    list_display = ( 'id', 'uid', 'name' )
 
 
 
 # Register your models here.
 
 @admin.register( Product )
-class ArticleAdmin( admin.ModelAdmin ):
+class ProductAdmin( admin.ModelAdmin ):
 
     list_display = ( 'name', )
 

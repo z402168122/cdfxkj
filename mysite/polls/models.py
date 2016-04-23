@@ -10,11 +10,14 @@ from django.db import models
 
 class ProductType( models.Model ):
 
+    uid = models.IntegerField( u'uid', unique = True, null = True )
     name = models.CharField( u'类型', max_length = 30 )
+    img1 = models.ImageField( u'类型图片', null = True )
 
     class Meta:
         verbose_name = u'产品分类'
         verbose_name_plural = u'产品分类'
+        ordering = ['id']
 
     def __unicode__( self ):
         return self.name
@@ -33,6 +36,7 @@ class Product( models.Model ):
     detail2 = models.TextField( verbose_name = "产品规格", default = '' )
     detail3 = models.TextField( verbose_name = "软件功能" , default = '' )
     detail4 = models.TextField( verbose_name = "典型应用" , default = '' )
+    detail5 = models.TextField( verbose_name = "订购信息" , default = '' )
 
     class Meta:
         verbose_name = u'产品'

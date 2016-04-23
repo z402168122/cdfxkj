@@ -20,6 +20,9 @@ from polls import views
 
 urlpatterns = [
     url( r'^admin/', admin.site.urls ),
-    url( r'^$', views.home, name = 'home' ),
-    url( r'^(\w+).html$', views.home, name = 'home' ),
+    url( r'^$', views.home, {} ),
+    url( r'^(?P<path>\w+).html$', views.home, {} ),
+    url( r'^products/(?P<product_type>\d+)$', views.product_list ),
+    url( r'^products/(?P<product_type>\d+)/(?P<product_id>\d+).html$', views.product_detail ),
+
 ]
