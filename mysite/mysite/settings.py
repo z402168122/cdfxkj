@@ -39,8 +39,8 @@ STATICFILES_DIRS = [
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/home/media/media.lawrence.com/static/"
 STATIC_ROOT = os.path.abspath( os.path.join( BASE_DIR, '../static' ) )
-
-
+MEDIA_ROOT = os.path.abspath( os.path.join( BASE_DIR, 'static/upload' ) )
+MEDIA_URL = '/static/upload/'
 # Application definition
 
 INSTALLED_APPS = [
@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'polls'
 ]
 
 MIDDLEWARE_CLASSES = [
