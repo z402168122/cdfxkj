@@ -26,11 +26,13 @@ class Product( models.Model ):
 
     name = models.CharField( u'名字', max_length = 30 )
     ptype = models.ForeignKey( ProductType, verbose_name = u'类型' )
-    img1 = models.ImageField( u'图片' )
-    detail1 = models.TextField( u'产品概览' )
-    detail2 = models.TextField( u'详细参数' )
-    detail3 = models.TextField( u'资料下载' )
-    detail4 = models.TextField( u'产品演示' )
+    recommend = models.BooleanField( default = False, verbose_name = u"导航推荐" )
+    home_recommend = models.BooleanField( default = False, verbose_name = u"首页推荐" )
+    img1 = models.ImageField( u'产品图片' )
+    detail1 = models.TextField( verbose_name = "产品特点" , default = '' )
+    detail2 = models.TextField( verbose_name = "产品规格", default = '' )
+    detail3 = models.TextField( verbose_name = "软件功能" , default = '' )
+    detail4 = models.TextField( verbose_name = "典型应用" , default = '' )
 
     class Meta:
         verbose_name = u'产品'
@@ -38,5 +40,4 @@ class Product( models.Model ):
 
     def __unicode__( self ):
         return self.name
-
 
