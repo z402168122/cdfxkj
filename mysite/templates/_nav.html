@@ -34,30 +34,31 @@
                         {% for p in product_list_header.2 %}
                         <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
                         {% endfor %}
+                        <dd><a href="/products/2">更多产品...</a></dd>
                     </dl>
 					
                     <dl>
-                        <dt><span><a href="/products/2">无线产品</a></span> </dt>
+                        <dt><span><a href="/products/3">无线产品</a></span> </dt>
                         <dt>
-                            <a href="/products/2"><img src="{{ product_header.3.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="无线产品"></img></a>
-                        </dt>
-                        
-                        {% for p in product_list_header.2 %}
-                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
-                        {% endfor %}
-                        <dd><a href="/products/2">更多产品...</a></dd>
-                    </dl>
-                    <dl>
-                        <dt><span><a href="/products/3">服务器</a></span> </dt>
-                        <dt>
-                            <a href="/products/3"><img src="{{ product_header.4.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="服务器"></img></a>
+                            <a href="/products/3"><img src="{{ product_header.3.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="无线产品"></img></a>
                         </dt>
                         
                         {% for p in product_list_header.3 %}
                         <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
                         {% endfor %}
-                        
                         <dd><a href="/products/3">更多产品...</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><span><a href="/products/4">服务器</a></span> </dt>
+                        <dt>
+                            <a href="/products/4"><img src="{{ product_header.4.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="服务器"></img></a>
+                        </dt>
+                        
+                        {% for p in product_list_header.4 %}
+                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
+                        {% endfor %}
+                        
+                        <dd><a href="/products/4">更多产品...</a></dd>
                     </dl>
 					
                 </div>
