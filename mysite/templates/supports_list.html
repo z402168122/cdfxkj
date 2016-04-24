@@ -1,0 +1,33 @@
+{% extends  'base.html' %}
+
+{% block main %}
+
+{% include  '_pretitle.html' %}
+
+<div class="main w980 mm mt20 od">
+  {% include  '_path.html' %}
+  
+  {% include  '_supports_sidebar.html' %}
+  
+  <div class="container">
+      <em class="corner"></em>
+      
+      {% for data in datas %}
+	      <div class="ctTit">{{ data.name }}</div>
+	      <div class="InfoCenter">
+	        <ul>
+	        	{% for rec in data.list %}
+	            <li>
+	              <a href="{{ rec.get_url }}" ><em>&nbsp;</em><i>{{ rec.title }}</i></a>
+	            </li>
+	            {% endfor %}
+	        </ul>
+	      </div>
+      {% endfor %}
+     
+      <div class="xiazailist">
+      </div>
+    </div>
+  </div>
+        
+{% endblock %}

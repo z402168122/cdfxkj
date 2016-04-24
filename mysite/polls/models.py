@@ -24,7 +24,7 @@ class ProductType( models.Model ):
 
     uid = models.IntegerField( u'uid', unique = True, null = True )
     name = models.CharField( u'类型', max_length = 30 )
-    img1 = models.ImageField( u'类型图片', null = True )
+    img = models.ImageField( u'类型图片', null = True )
 
     class Meta:
         verbose_name = u'产品分类'
@@ -33,6 +33,10 @@ class ProductType( models.Model ):
 
     def __unicode__( self ):
         return self.name
+
+    def get_img( self ):
+        return '%s/%s' % ( settings.MEDIA_URL, self.img )
+
 
     def get_url( self ):
         return '/products/%s' % self.uid
@@ -88,4 +92,67 @@ class Abouts( models.Model ):
         return '/abouts/%s/%s.html' % ( self.ptype, self.id )
 
 
+class Supports( models.Model ):
+    ptype_choices = ( ( 0, u'下载中心' ), ( 1, u'售后服务' ) )
 
+    title = models.CharField( u'标题', max_length = 30 )
+    ptype = models.IntegerField( u'类型', choices = ptype_choices, default = 0 )
+    detail = models.TextField( verbose_name = "内容" , default = '' )
+    create_time = models.DateTimeField( u'创建时间', auto_now = True )
+
+    class Meta:
+        verbose_name = u'服务支持'
+        verbose_name_plural = '服务支持'
+
+    def __unicode__( self ):
+        return self.title
+
+    def get_url( self ):
+        return '/supports/%s/%s.html' % ( self.ptype, self.id )
+
+
+
+
+class SolutionType( models.Model ):
+
+    uid = models.IntegerField( u'uid', unique = True, null = True )
+    name = models.CharField( u'类型', max_length = 30 )
+    img = models.ImageField( u'类型图片', null = True )
+
+    class Meta:
+        verbose_name = u'方案分类'
+        verbose_name_plural = u'方案分类'
+        ordering = ['id']
+
+    def __unicode__( self ):
+        return self.name
+
+    def get_img( self ):
+        return '%s/%s' % ( settings.MEDIA_URL, self.img )
+
+
+    def get_url( self ):
+        return '/solutions/%s' % self.uid
+
+
+
+
+class Solution( models.Model ):
+
+    name = models.CharField( u'方案标题', max_length = 60 )
+    ptype = models.ForeignKey( SolutionType, verbose_name = u'类型', default = 0 )
+    detail = models.TextField( u'内容', default = '' , )
+    create_time = models.DateTimeField( u'创建时间', auto_now = True )
+
+    class Meta:
+        verbose_name = u'方案'
+        verbose_name_plural = '方案'
+
+    def __unicode__( self ):
+        return self.name
+
+    def get_img( self ):
+        return '%s/%s' % ( settings.MEDIA_URL, self.img )
+
+    def get_url( self ):
+        return '/solutions/%s/%s.html' % ( self.ptype.id, self.id )

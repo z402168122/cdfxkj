@@ -1,0 +1,33 @@
+<link href="/static/skins/css/inside.css" rel="stylesheet" type="text/css" /> 
+
+<div class="sideBar">
+    <div class="sideBarTop">
+      <h3>服务支持</h3>
+      <h4></h4>
+    </div>
+    <div class="sideBarMenu">
+      <ul>
+        <li>
+          <a href="javascript:void(0)" title="下载中心">下载中心</a>
+          
+          {% for r in abouts %}
+            <dl class=" collapse in">
+              <dd> <a href="{{ r.get_url }}" title="">{{ r.title }}</a></dd>
+            </dl>
+          {% endfor %}
+            
+          
+        </li>
+        <li>
+          <a href="javascript:void(0)" title="售后服务">售后服务</a>
+          {% for r in news %}
+            <dl class=" collapse in">
+              <dd> <a href="{{ r.get_url }}" title="">{{ r.title }}</a></dd>
+            </dl>
+          {% endfor %}
+        </li>
+        
+        
+      </ul>
+    </div>
+  </div>

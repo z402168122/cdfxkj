@@ -64,3 +64,78 @@ def abouts_detail( request, about_type = 0, about_id = 0, template_name = "about
     return render_to_response( template_name, locals(), context_instance = RequestContext( request ) )
 
 
+from models import Supports
+def supports_list( request, vtype = 0, template_name = "supports_list.html" ):
+    paths = [['/supports', u'服务支持']]
+    if int( vtype ) != -1:
+        paths.append( ['/supports/%s' % vtype, dict( Supports.ptype_choices ).get( int( vtype ) )] )
+    news = Supports.objects.filter( ptype = 0 ).order_by( '-id' )[:5]
+    abouts = Supports.objects.filter( ptype = 1 ).order_by( '-id' )[:5]
+
+    datas = []
+    for k in Supports.ptype_choices:
+        if k[0] == int( vtype ) or vtype == -1:
+            recs = Supports.objects.filter( ptype = k[0] ).order_by( '-id' )
+            datas.append( {'name':k[1], 'list':recs} )
+
+
+
+    return render_to_response( template_name, locals(), context_instance = RequestContext( request ) )
+
+
+def supports_detail( request, vtype = 0, vid = 0, template_name = "supports_dateil.html" ):
+    paths = [['/supports', u'服务支持']]
+    paths.append( ['/supports/%s' % vtype, dict( Supports.ptype_choices ).get( int( vtype ) )] )
+
+    news = Supports.objects.filter( ptype = 0 ).order_by( '-id' )[:5]
+    abouts = Supports.objects.filter( ptype = 1 ).order_by( '-id' )[:5]
+
+    rec = Supports.objects.get( id = vid )
+
+    return render_to_response( template_name, locals(), context_instance = RequestContext( request ) )
+
+
+
+from models import Solution
+from models import SolutionType
+def solutions_list( request, vtype = 0, template_name = "solutions_list.html" ):
+    if int( vtype ) == -1:
+        st = SolutionType.objects.all()[:1]
+        if st:
+            return HttpResponseRedirect( '/solutions/%s' % st[0].id )
+        else:
+            raise Http404
+    st = SolutionType.objects.get( id = vtype )
+
+    paths = [['', u'解决方案']]
+    if int( vtype ) != -1:
+        paths.append( ['/solutions/%s' % vtype, st.name] )
+
+    news = Solution.objects.filter( ptype = 0 ).order_by( '-id' )[:5]
+    abouts = Solution.objects.filter( ptype = 1 ).order_by( '-id' )[:5]
+
+    datas = []
+    for k in [st]:
+        recs = Solution.objects.filter( ptype = k ).order_by( '-id' )
+        datas.append( {'name':st.name, 'list':recs} )
+
+
+
+    return render_to_response( template_name, locals(), context_instance = RequestContext( request ) )
+
+
+def solutions_detail( request, vtype = 0, vid = 0, template_name = "solutions_dateil.html" ):
+    paths = [['', u'解决方案']]
+    st = SolutionType.objects.get( id = vtype )
+    paths.append( ['/solutions/%s' % vtype, st.name] )
+
+    news = Solution.objects.filter( ptype = 0 ).order_by( '-id' )[:5]
+    abouts = Solution.objects.filter( ptype = 1 ).order_by( '-id' )[:5]
+
+    rec = Solution.objects.get( id = vid )
+
+    return render_to_response( template_name, locals(), context_instance = RequestContext( request ) )
+
+
+
+

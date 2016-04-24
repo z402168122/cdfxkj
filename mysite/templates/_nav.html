@@ -1,0 +1,163 @@
+<div class="nav">
+    <ul>
+        <li><a href="/">首页</a>
+        </li>
+        <!-- 产品中心 -->
+        <li><a href="/products/1">产品中心</a>
+            <div class="Drop D_pro nav_pro">
+                <div class="nav_sub">
+                    <ul>
+                        <li class="notes_l">产品分类与最新推荐</li>
+                    </ul>
+                </div>
+                <div class="nav_sub_cnt">
+                    <!--/ 全部产品 /-->
+					
+                    <dl>
+                        <dt><span><a href="/products/1">交换机</a></span> </dt>
+                        <dt>
+                            <a href="/products/1"><img src="{{ product_header.1.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="交换机"></img></a>
+                        </dt>
+                        
+                        {% for p in product_list_header.1 %}
+                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
+                        {% endfor %}
+                        <dd><a href="/products/1">更多产品...</a></dd>
+                    </dl>
+					
+                    <dl>
+                        <dt><span><a href="/products/2">路由器</a></span> </dt>
+                        <dt>
+                            <a href="/products/2"><img src="{{ product_header.2.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="路由器"></img></a>
+                        </dt>
+                        
+                        {% for p in product_list_header.2 %}
+                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
+                        {% endfor %}
+                    </dl>
+					
+                    <dl>
+                        <dt><span><a href="/products/2">无线产品</a></span> </dt>
+                        <dt>
+                            <a href="/products/2"><img src="{{ product_header.3.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="无线产品"></img></a>
+                        </dt>
+                        
+                        {% for p in product_list_header.2 %}
+                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
+                        {% endfor %}
+                        <dd><a href="/products/2">更多产品...</a></dd>
+                    </dl>
+                    <dl>
+                        <dt><span><a href="/products/3">服务器</a></span> </dt>
+                        <dt>
+                            <a href="/products/3"><img src="{{ product_header.4.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="服务器"></img></a>
+                        </dt>
+                        
+                        {% for p in product_list_header.3 %}
+                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
+                        {% endfor %}
+                        
+                        <dd><a href="/products/3">更多产品...</a></dd>
+                    </dl>
+					
+                </div>
+            </div>
+        </li>
+        <!-- 解决方案 -->
+        <li><a href="/solutions">解决方案</a>
+            <div class="Drop D_pro nav_pro">
+                <div class="nav_sub">
+                    <ul>
+                        <li class="notes_l">解决方案与成功案例</li>
+                    </ul>
+                </div>
+                <div class="nav_sub_cnt">
+                    <!--/ 全部产品 /-->
+                    {% for r in solution_list_head %}
+                    <dl>
+                        <dt><span><a href="{{ r.type.get_url }}">{{ r.type.name }}</a></span> </dt>
+                        <dt>
+                            <a href="{{ r.type.get_url }}">
+                            	<img src="{{ r.type.get_img }}" class="img1" style="width: 125px;height: 85px;" />
+                            </a>
+                        </dt>
+                        {% for p in r.recs %}
+                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
+                        {% endfor %}
+                        
+                        
+                        
+                        <dd><a href="{{ r.type.get_url }}">更多产品...</a></dd>
+                    </dl>
+					{% endfor %}
+                   
+                </div>
+            </div>
+        </li>
+        <!-- 服务支持 -->
+        <li><a href="/supports/1"> 服务支持</a>
+            <div class="Drop D_tech nav_sve" style="width:523px;">
+                <div class="nav_sub">
+                    <ul>
+                        <li class="notes_l">产品售后服务中心</li>
+                    </ul>
+                </div>
+                <div class="nav_sub_cnt_03">
+                    <!--/ 服务支持 /-->
+                    <dl style="width:240px;">
+                        <dt><span><a href="/supports/0" rel="nofollow">下载中心</a></span></dt>
+                        <dt></dt>
+						
+							{% for p in supports_list_head.0 %}
+	                        <dd><a href="{{ p.get_url }}">{{ p.title }}</a></dd>
+	                        {% endfor %}
+						
+                    </dl>
+                    <dl style="width:190px;">
+                        <dt><span><a href="/supports/1">售后服务</a></span></dt>
+                        <dt></dt>
+						
+							{% for p in supports_list_head.1 %}
+	                        <dd><a href="{{ p.get_url }}">{{ p.title }}</a></dd>
+	                        {% endfor %}
+						
+                    </dl>
+                    <!--/服务支持/-->
+                </div>
+            </div>
+        </li>
+        <!-- 关于网硕 -->
+        <li><a href="/abouts/1">关于网硕</a>
+            <div class="Drop D_about nav_sve">
+                <div class="nav_sub">
+                    <ul>
+                        <li class="notes_l">公司介绍与最新资讯</li>
+                    </ul>
+                </div>
+                <div class="nav_sub_cnt_02">
+                    <!--/ 关于我们 /-->
+                    <dl style="width:200px;">
+                        <dt><span><a href="/abouts/1">公司介绍</a></span></dt>
+                        
+                        {% for p in abouts_list_header.1 %}
+                        <dd><a class="leftlinks" href="{{ p.get_url }}">{{ p.title }}</a></dd>
+                        {% endfor %}
+                        
+                        
+                    </dl>
+                    <dl style="width:480px;">
+                        
+                        <dt><span><a href="/abouts4021.html">最新资讯</a></span></dt>
+                        
+                        {% for p in abouts_list_header.0 %}
+                        <dd><a class="leftlinks" href="{{ p.get_url }}">{{ p.title }}</a></dd>
+                        {% endfor %}
+                        
+                    </dl>
+                    
+                    <!--/关于我们/-->
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>

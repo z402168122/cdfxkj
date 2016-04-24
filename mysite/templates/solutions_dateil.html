@@ -1,0 +1,36 @@
+{% extends  'base.html' %}
+
+{% block main %}
+
+{% include  '_pretitle.html' %}
+
+<div class="main w980 mm mt20 od">
+  {% include  '_path.html' %}
+  
+  {% include  '_solutions_sidebar.html' %}
+
+<div class="rightCon"><!-- CaseBox -->
+    <div class="proSearch">
+      <div class="container">
+        <em class="corner"></em>
+        <div class="ctTit">
+          	{{ rec.title }} 
+        </div>
+        <div class="proTab">
+          <div class="PTDCon">
+            <div class="PTDBox bk">
+              <div class="proInfo">
+                {{ rec.detail }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="page">
+      
+    </div>
+  </div>
+</div>
+        
+{% endblock %}
