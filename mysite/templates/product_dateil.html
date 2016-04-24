@@ -39,21 +39,32 @@
            
           </div>
           <div class="PTDCon">
+          	{% if rec.detail %}
             <div class="PTDBox bk">
               {{ rec.detail1|safe }}
             </div>
+            {% endif %}
+            {% if rec.detail %}
             <div class="PTDBox ">
               {{ rec.detail2|safe }}
             </div>
+            {% endif %}
+            {% if rec.detai3 %}
             <div class="PTDBox ">
               {{ rec.detail3|safe }}
             </div>
+            {% endif %}
+            {% if rec.detai4 %}
             <div class="PTDBox">
               {{ rec.detail4|safe }}
             </div>
+            {% endif %}
+            {% if rec.detai5 %}
             <div class="PTDBox">
               {{ rec.detail5|safe }}
             </div>
+            {% endif %}
+            
           </div>
         </div>
       </div>
