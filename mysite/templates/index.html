@@ -7,23 +7,11 @@
 <div class="Inbanner">
     <div class="banUL">
         <ul>
-          
-            <li>
-                <a href="/products/1"><img src="/static/upload/images/2015/5/22181154187.jpg" height="410" /></a>
-            </li>
-         
-            <li>
-                <a href="/products/2"><img src="/static/upload/images/2015/5/216555779.jpg" height="410" /></a>
-            </li>
-         
-            <li>
-                <a href="/products/3"><img src="/static/upload/images/2015/5/22181514986.jpg" height="410" /></a>
-            </li>
-         
-            <li>
-                <a href="/products/4"><img src="/static/upload/images/2015/5/213312314.jpg" height="410" /></a>
-            </li>
-            
+            {% for l in blist %}
+				<li>
+                	<a href="{{ l.href }}"><img src="/static/upload/{{ l.img1 }}" height="410" /></a>
+            	</li>
+			{% endfor  %}            
         </ul>
     </div>
 </div>
@@ -35,14 +23,16 @@
 <div class="news">
     <div class="w980 mm">
         <div class="share_a"></div>
-        <strong><a href="/About/NewsList.aspx?nodecode=101006002001">公司新闻:</a></strong>
+        <strong><a href="/abouts/1">公司新闻:</a></strong>
+        
         <div class="newsScroll" id="div1">
             <ul>
-              
-                <li><a href="/aboutDetails406.html" target="_blank">网硕最新万兆交换机，傲视群雄！</a><span>[2015-05-21]</span></li>
-              
+              {% for n in  news %}
+                <li><a href="{{ n.get_url }}" target="_blank">{{ n.title }}</a><span>[{{ n.create_time }}]</span></li>
+              {% endfor %}
             </ul>
         </div>
+        
     </div>
 </div>
 {% endblock %}
@@ -52,20 +42,15 @@
 
 <div class="main w980 mm mt20 od">
     <ul class="IndexM">
-      
+      {% for p in plist %}
         <li>
-            <a href="/ProductDetails10020.html" title="新品推荐"><img src="/static/upload/images/2015/6/221586257.jpg" width="319" height="166" onerror="this.src='/static/upload/images/2015/6/221586257.jpg'" /> </a>
-            <h3><a href="/ProductDetails10020.html" title="网硕R15千兆流控路由">网硕R15千兆流控路由推荐</a></h3>
-            <h4 title="网硕 R15路由器是成都网硕网络科技有限公司面向运营商IP城域网、政企网、网吧、以及无盘工作环境推出的新一代智能流控路由器。R15基于新一代的高性能工业级硬件和网硕自主知识产权的软件系统，支持强大的运营级QoS、一键智能流控、简单又强大的多线分流、自动应用优先级、策略带宽控制、连接数控制、VPN借线等功能，使该系列产品能够满足各种复杂场景的应用需求。">网硕 R15路由器是成都网硕网络科技有限公司面向运营商IP城域网。</h4>
+            <a href="{{ p.get_url }}" title="新品推荐">
+            	<img src="{{ p.get_img }}" width="319" height="166"  />
+             </a>
+            <h3><a href="{{ p.get_url }}" title="">{{ p.name }}</a></h3>
+            <h4>{{ p.detail }}</h4>
         </li>
-       
-        <li>
-            <a href="/ProductDetails10018.html" title="新品推荐"><img src="/static/upload/images/2015/6/2163848271.jpg" width="319" height="166" onerror="this.src='/static/upload/images/2015/6/2163848271.jpg'" /> </a>
-            <h3><a href="/ProductDetails10018.html" title="网硕S8856G万兆交换机">网硕S8856G万兆交换机推荐</a></h3>
-            <h4 title="网硕S8856G万兆交换机是面向运营商IP城域网、政企网、网吧、以及无盘工作环境推出的新一代智能交换机。">网硕S8856G万兆交换机是面向运营商IP城域网、政企网、网吧、以及无盘工作环境推出的新一代智能交换机。</h4>
-        </li>
-       
-      
+       {% endfor %}
     </ul>
 </div>
 {% endblock %}

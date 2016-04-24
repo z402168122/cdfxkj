@@ -24,5 +24,9 @@ urlpatterns = [
     url( r'^(?P<path>\w+).html$', views.home, {} ),
     url( r'^products/(?P<product_type>\d+)$', views.product_list ),
     url( r'^products/(?P<product_type>\d+)/(?P<product_id>\d+).html$', views.product_detail ),
+    url( r'^abouts$', views.abouts_list, {'about_type':-1} ),
+    url( r'^abouts/(?P<about_type>\d+)$', views.abouts_list ),
+    url( r'^abouts/(?P<about_type>\d+)/(?P<about_id>\d+).html$', views.abouts_detail ),
+
 
 ]

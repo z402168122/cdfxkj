@@ -13,34 +13,46 @@
     <div class="proSearch">
       <div class="container">
         <em class="corner"></em>
-        <div class="ctTit">title</div>
+        
+        <div class="ctTit">{{ rec.name }}</div>
         <div class="proImg">
           <div class="proImgBig">
-            <img src="/static/upload/1.jpg" width="396" height="244" alt="" ></div>
+            <img src="{{ rec.get_img }}" width="396" height="244" alt="" ></div>
         </div>
         <div class="proTab">
           <div class="PTDTop">
+          	{% if rec.detail1 %}
             <span class="ptspcur">产品特点</span>
+            {% endif  %}
+            {% if rec.detail2 %}
             <span>产品规格</span>
+            {% endif  %}
+            {% if rec.detail3 %}
             <span>软件功能</span>
+            {% endif  %}
+            {% if rec.detail4 %}
             <span>典型应用</span>
+            {% endif  %}
+            {% if rec.detail5 %}
             <span>订购信息</span>
+            {% endif  %}
+           
           </div>
           <div class="PTDCon">
             <div class="PTDBox bk">
-              1
+              {{ rec.detail1|safe }}
             </div>
             <div class="PTDBox ">
-              2
+              {{ rec.detail2|safe }}
             </div>
             <div class="PTDBox ">
-              3
+              {{ rec.detail3|safe }}
             </div>
             <div class="PTDBox">
-              4
+              {{ rec.detail4|safe }}
             </div>
             <div class="PTDBox">
-              5
+              {{ rec.detail5|safe }}
             </div>
           </div>
         </div>

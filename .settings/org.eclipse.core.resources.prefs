@@ -3,3 +3,4 @@ encoding//mysite/app.py=utf-8
 encoding//mysite/get_file.py=utf-8
 encoding//mysite/polls/admin.py=utf-8
 encoding//mysite/polls/models.py=utf-8
+encoding//mysite/polls/views.py=utf-8
