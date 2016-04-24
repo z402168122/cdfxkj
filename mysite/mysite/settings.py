@@ -85,7 +85,7 @@ TEMPLATES = [
         },
     },
 ]
-
+DEFAULT_FILE_STORAGE = 'polls.processor.ImageStorage'
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
@@ -99,7 +99,7 @@ DATABASES = {
     }
 }
 
-
+DEFAULT_FILE_STORAGE = 'icate.system.storage.ImageStorage'
 # Password validation
 # https://docs.djangoproject.com/en/1.9/ref/settings/#auth-password-validators
 

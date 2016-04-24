@@ -85,7 +85,7 @@ TEMPLATES = [
         },
     },
 ]
-
+DEFAULT_FILE_STORAGE = 'polls.processor.ImageStorage'
 WSGI_APPLICATION = 'mysite.wsgi.application'
 
 
