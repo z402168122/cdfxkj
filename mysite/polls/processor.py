@@ -73,6 +73,8 @@ class ImageStorage( FileSystemStorage ):
         fn = fn + '_%d' % random.randint( 0, 100 )
         # 重写合成文件名
         name = os.path.join( d, fn + ext )
+
+        name = name.encode( 'gbk' )
         # 调用父类方法
         return super( ImageStorage, self )._save( name, content )
 
