@@ -16,7 +16,7 @@ import tornado.web
 import tornado.wsgi
 import sys
 import os
-os.environ.setdefault( "DJANGO_SETTINGS_MODULE", "mysite.settings_online" )
+os.environ.setdefault( "DJANGO_SETTINGS_MODULE", "mysite.settings" )
 django.setup()
 
 
