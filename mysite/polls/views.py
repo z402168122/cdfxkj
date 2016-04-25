@@ -7,6 +7,9 @@ from models import HomeBaner
 from models import Abouts
 from models import Product
 from models import ProductType
+import json
+from mysite import settings
+
 
 def home( request, path = '', template_name = "index.html" ):
     blist = HomeBaner.objects.all()
@@ -14,6 +17,36 @@ def home( request, path = '', template_name = "index.html" ):
     plist = Product.objects.filter( recommend = True ).order_by( '-id' )[:4]
     return render_to_response( template_name, locals(), context_instance = RequestContext( request ) )
 
+
+def update_img( request ):
+    import os
+    import time
+    import random
+    if not request.user.is_authenticated:
+        raise Http404
+
+    f = request.FILES['imgFile']
+
+    ext = os.path.splitext( f.name )[1]
+
+    fn = time.strftime( '%Y%m%d%H%M%S' )
+    fn = fn + '_%d' % random.randint( 0, 100 )
+
+    # 重写合成文件名
+    name = fn + ext
+    path = os.path.join( settings.MEDIA_ROOT, name )
+
+    path = path.encode( 'gbk' )
+    destination = open( path, 'wb+' )
+    for chunk in f.chunks():
+        destination.write( chunk )
+    destination.close()
+
+    data = {
+            "error" : 0,
+            "url" :  settings.MEDIA_URL + '/' + name
+    }
+    return HttpResponse( json.dumps( data ) )
 
 
 

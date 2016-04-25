@@ -37,6 +37,6 @@ urlpatterns = [
     url( r'^solutions/(?P<vtype>\d+)$', views.solutions_list ),
     url( r'^solutions/(?P<vtype>\d+)/(?P<vid>\d+).html$', views.solutions_detail ),
 
-
+    url( r'^update_img$', views.update_img ),
 
 ]
