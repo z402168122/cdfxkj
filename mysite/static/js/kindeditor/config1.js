@@ -1,6 +1,6 @@
 KindEditor.ready(function(K) {
     
-    K.create('#id_detail'+i,{
+    K.create('#id_detail',{
 	        // 指定大小
 	        width:'800px',
 	        height:'500px',
