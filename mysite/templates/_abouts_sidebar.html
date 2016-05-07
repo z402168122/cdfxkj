@@ -2,13 +2,13 @@
 
 <div class="sideBar">
     <div class="sideBarTop">
-      <h3>关于网硕</h3>
+      <h3>关于方迅</h3>
       <h4></h4>
     </div>
     <div class="sideBarMenu">
       <ul>
         <li>
-          <a href="javascript:void(0)" title="公司介绍">公司介绍</a>
+          
           
           {% for r in abouts %}
             <dl class=" collapse in">
@@ -19,7 +19,7 @@
           
         </li>
         <li>
-          <a href="javascript:void(0)" title="新闻动态">新闻动态</a>
+          
           {% for r in news %}
             <dl class=" collapse in">
               <dd> <a href="{{ r.get_url }}" title="">{{ r.title }}</a></dd>
