@@ -7,25 +7,14 @@
     </div>
     <div class="sideBarMenu">
       <ul>
-        <li>
-          
-          
-          {% for r in abouts %}
-            <dl class=" collapse in">
-              <dd> <a href="{{ r.get_url }}" title="">{{ r.title }}</a></dd>
-            </dl>
-          {% endfor %}
-            
-          
-        </li>
-        <li>
-          
-          {% for r in news %}
-            <dl class=" collapse in">
-              <dd> <a href="{{ r.get_url }}" title="">{{ r.title }}</a></dd>
-            </dl>
-          {% endfor %}
-        </li>
+        <ul>
+        	
+        	{% for r in solution_list_head %}
+	         <li>
+	          <a title="" href="/solutions/{{ r.type.id }}">{{ r.type.name }}</a> 
+	        </li>
+	       	{% endfor %}
+	    </ul>
         
         
       </ul>
