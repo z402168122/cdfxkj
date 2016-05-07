@@ -60,6 +60,18 @@
                         
                         <dd><a href="/products/4">更多产品...</a></dd>
                     </dl>
+                    <dl>
+                        <dt><span><a href="/products/5">防火墙</a></span> </dt>
+                        <dt>
+                            <a href="/products/5"><img src="{{ product_header.5.get_img }}" style="width: 125px;height: 85px;" class="img1" alt="服务器"></img></a>
+                        </dt>
+                        
+                        {% for p in product_list_header.5 %}
+                        <dd><a href="{{ p.get_url }}">{{ p.name }}</a></dd>
+                        {% endfor %}
+                        
+                        <dd><a href="/products/5">更多产品...</a></dd>
+                    </dl>
 					
                 </div>
             </div>
