@@ -112,17 +112,12 @@
 							{% for p in supports_list_head.0 %}
 	                        <dd><a href="{{ p.get_url }}">{{ p.title }}</a></dd>
 	                        {% endfor %}
-						
-                    </dl>
-                    <dl style="width:190px;">
-                        <dt><span><a href="/supports/1">售后服务</a></span></dt>
-                        <dt></dt>
-						
-							{% for p in supports_list_head.1 %}
+	                        {% for p in supports_list_head.1 %}
 	                        <dd><a href="{{ p.get_url }}">{{ p.title }}</a></dd>
 	                        {% endfor %}
 						
                     </dl>
+                    
                     <!--/服务支持/-->
                 </div>
             </div>
